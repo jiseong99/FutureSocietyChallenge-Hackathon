@@ -119,7 +119,38 @@
 + 로드킬 관련 데이터는 지리적, 시간적, 지역에 따라 일관된 데이터가 아닌 편향된 데이터가 많음
 + 도로 교통 데이터의 정확도가 낮음 
 + 관련 선행연구 부족으로 참고 자료 한계 존재
-![image](https://github.com/jiseong99/FutureSocietyChallenge-Hackathon/assets/137580822/35ad9be4-29e4-4552-ae75-e894935577af)
 
+<br/>
 
+### 향후 연구 방안
++ 해외의 생태통로 설치 성공사례를 바탕으로 국내의 생태통로의 환경을 파악하여 동물친화적 생태통로의 최적입지 파악
++ 야생동물 활동반경을 반영한 생태통로의 최적입지 파악 
++ 로드킬 저감 방안 및 환경변화에 따른 로드킬 발생 간 상관관계 파악
++ 인공지능 및 자율주행차량의 센서 기술 발전을 이용한 회피 시스템 개발 
++ 시민들의 로드킬 사고를 효율적으로 보고, 수집할 수 있는 시스템 개발
+
+<br/>
   
+## 6. 데이터 출처
++ 문제점 배경 : 
++ https://www.joongang.co.kr/article/25108523#home
++ https://www.dailyvet.co.kr/news/policy/173451
++ https://news.heraldcorp.com/view.php?ud=20221113000017
++ http://news.koroad.or.kr/koroad/vol68/sub/sub1_02.php
++ https://m.hankookilbo.com/News/Read/A2022101911380005126
+
++ 선행연구 :
++ https://kst.or.kr/bbs/board.php?bo_table=tugo_programbook83&wr_id=235
++ https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002004506
+
++ 로드킬 데이터 정보: https://www.data.go.kr/data/15045544/fileData.do
+
++ 로드킬 정보시스템 로드킬 신고 현황: https://www.data.go.kr/data/15105476/fileData.do
+
++ 생태통로 지도서비스: https://www.nie-ecobank.kr/wildlifecrossing/mapservice/MapserviceList.do
+
++ 대한민국 행정구역(SHP): http://www.gisdeveloper.co.kr/
+
++ 생태 전국자연환경조사(포유류): [환경 빅데이터 플랫폼- 데이터 검색 (bigdata-environment.kr)](https://www.bigdata-environment.kr/user/data_market/detail.do?id=44ad8820-2de7-11ea-80be-1170a7f7b2de#!)
+
+

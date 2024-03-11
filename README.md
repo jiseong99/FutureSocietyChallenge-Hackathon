@@ -75,6 +75,51 @@
 
 <br/>
 
-+입지 선정 우선 순위 결정 가중치 결정
+### 입지 선정 우선 순위 결정 가중치 결정
++ 변수 간 상관관계 확인
+  
+![image](https://github.com/jiseong99/FutureSocietyChallenge-Hackathon/assets/137580822/5e1acd10-3200-4870-b319-7e7586c3d47d)
 
 
+### Elbow, Silhouette, Gap Statistic Algorithm
+![image](https://github.com/jiseong99/FutureSocietyChallenge-Hackathon/assets/137580822/192c7fff-48e9-4e8f-a314-39364ddba816)
+![image](https://github.com/jiseong99/FutureSocietyChallenge-Hackathon/assets/137580822/abc209c0-e732-4e9b-9035-0d11dfbaf27e)
+![image](https://github.com/jiseong99/FutureSocietyChallenge-Hackathon/assets/137580822/2dcbd6f1-779a-4bbd-b84f-7176835537ab)
+
+
++ 최적의 클러스터 개수 선정 (n_clusters = 8)
++ Elbow : 9, Silhouette : 12, Gap Statistic : 4
++ (9 + 12 + 4 ) / 3 = 8
+  
+<br/>
+
+### 경기 남부 및 충청 지역에 우선순위 맵핑
++ 색의 진하기가 진할수록 우선순위가 높음
+![image](https://github.com/jiseong99/FutureSocietyChallenge-Hackathon/assets/137580822/a5cb526d-cbd5-4db5-aeff-a61b6e478c69)
+
+<br/>
+
+## 4. 관련 정책 아이디어
+![image](https://github.com/jiseong99/FutureSocietyChallenge-Hackathon/assets/137580822/914209cd-a388-4414-98df-7d7dd7dfde74)
+![image](https://github.com/jiseong99/FutureSocietyChallenge-Hackathon/assets/137580822/9d52b756-ae36-4f09-bee4-33f2a60b8902)
+
+<br/>
+
+## 5. 기대효과 및 한계점
+### 기대효과
+![image](https://github.com/jiseong99/FutureSocietyChallenge-Hackathon/assets/137580822/22c1f7c1-8d2a-4999-942e-7f583700812e)
+
++ 지역 사회의 환경 인프라 향상에 다양한 긍정적인 영향을 미칠것으로 사료됨
+
+  <br/>
+
+### 한계점
++ 활용할 수 있는 데이터 부족으로 인한 로드킬 요인 분석 및 원인 파악 어려움
++ 작은 동물이나 교통량이 적은 지역에서는 사고가 감지되지 않아 실제 규모를 정확하게 판단하는 것이 어려움 
++ 로드킬 관련 데이터는 지리적, 시간적, 지역에 따라 일관된 데이터가 아닌 편향된 데이터가 많음
++ 도로 교통 데이터의 정확도가 낮음 
++ 관련 선행연구 부족으로 참고 자료 한계 존재
+![image](https://github.com/jiseong99/FutureSocietyChallenge-Hackathon/assets/137580822/35ad9be4-29e4-4552-ae75-e894935577af)
+
+
+  

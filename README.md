@@ -15,6 +15,9 @@
 + 주최 : 미래와 소프트
 + 주관 : ET EDU (이티에듀)
 + 링크 : https://edu.ggumeasy.com/?pn=product.view&pcode=H7843-R5115-J7144
+  
+![image](https://github.com/jiseong99/FutureSocietyChallenge-Hackathon/assets/137580822/4a7e0291-9d47-48f2-86b4-8304b1ce26a3)
+
 
 #### [분석 배경 및 필요성]
 ![image](https://github.com/jiseong99/FutureSocietyChallenge-Hackathon/assets/137580822/573f2795-f1c1-42d7-8670-5d2e108b445c)

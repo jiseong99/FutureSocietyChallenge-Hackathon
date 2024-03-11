@@ -20,6 +20,8 @@
 ![image](https://github.com/jiseong99/FutureSocietyChallenge-Hackathon/assets/137580822/573f2795-f1c1-42d7-8670-5d2e108b445c)
 ![image](https://github.com/jiseong99/FutureSocietyChallenge-Hackathon/assets/137580822/d4bff781-a57c-48a6-9851-ff161b3e9bac)
 ![image](https://github.com/jiseong99/FutureSocietyChallenge-Hackathon/assets/137580822/2a02ca7c-b997-4e1f-8efc-b8db437b9f77)
+<br/>
+
 +야생동물 '로드킬' 1년새 72% 증가, 보호종까지 예외는 없음
 +로드킬 건수가 점차 증가하자, 정부는 동물 찻길 사고 저감 대책(20~22)를 추진한 바 있음
 +생태통로, 유도울타리 등을 통하여 실제 로드킬 횟수가 줄어듦
@@ -35,44 +37,41 @@
 
 
 ### 분석 로드맵
-<img src="https://github.com/svng-zu/LG-AIMERS/assets/70852514/fc7496a8-71a4-4e15-9745-3ab54bb6fa59" alt="data1" width="50%" height="50%">
+![image](https://github.com/jiseong99/FutureSocietyChallenge-Hackathon/assets/137580822/855675bc-dd91-47d1-b6d2-6942df4f2059)
 
-+ 타겟 변수 is_converted 의 True, False 비율이 약 11: 1로 불균형이 있음을 알 수 있음
-+ 클래스 불균형 데이터는 모델 학습 시 과적합의 위험이 큼
-  + 언더샘플링으로 해결
+
 
 <br/>
 
-### 범주형 변수
-<img src="https://github.com/svng-zu/LG-AIMERS/assets/70852514/c3bd18ae-8371-4e30-8cad-2c185750fd4c" alt="data" width=30% height=30%>
-<img src="https://github.com/svng-zu/LG-AIMERS/assets/70852514/ee3fd6df-0429-46b3-927c-ac8293a9e9bf" alt="data" width=30% height=30%>
-<img src="https://github.com/svng-zu/LG-AIMERS/assets/70852514/fdb061c3-9a6c-4c4c-aa0f-f3c916246ef3" alt="data" width=30% height=30%>
-
-+ 대부분의 변수에서 희소 범주의 개수가 많음
-+ 희소 범주들은 모델 학습 시 트리의 깊이가 깊어지고 과적합으로 모델 성능 저하시킴
-  + 희소 범주를 '기타' 범주로 처리
-
-### 수치형 변수
-<img src="https://github.com/svng-zu/LG-AIMERS/assets/70852514/ccff87f9-e838-4de0-aec4-47fe1caab7e8" alt="data" width=50% height=50%>
+### 데이터 시각화 / Data Visualizaiton
+![image](https://github.com/jiseong99/FutureSocietyChallenge-Hackathon/assets/137580822/f6b78e94-e788-4c01-9818-4e79fb5dbe5a)
 
 <br/>
 
-#### 상관계수
-<img src="https://github.com/svng-zu/LG-AIMERS/assets/70852514/5d40481f-2a2b-4191-be82-bd957a022311" alt="data" width=50% height=50%>
+![image](https://github.com/jiseong99/FutureSocietyChallenge-Hackathon/assets/137580822/df8dfb03-fb26-4c25-8dcc-717be463d9ad)
 
-+ 변수간의 상관성이 적음을 알 수 있음
++ 충청, 경기남부 지역에서 로드킬 다수 발생 및 야생동물 밀집 -> 충청, 경기남부 위주의 분석 진행
   
 <br/>
 
-## 3. 데이터 전처리
-### 컬럼 삭제
+![image](https://github.com/jiseong99/FutureSocietyChallenge-Hackathon/assets/137580822/8efa05a5-418c-45b6-8a9f-03242a4c5ef1)
+
+<br/>
+
+![image](https://github.com/jiseong99/FutureSocietyChallenge-Hackathon/assets/137580822/87c7cab7-b07b-47db-b0dc-b224ad87b8b2)
+
+<br/>
+
+  
+## 3. 해결방안
+### 생태통로 신규입지 우선순위 선정
 + 중복 변수 제거 : customer_country.1
 + 결측치가 과반인 변수는 제거 : product_subcategory, product_modelname, business_area, business_subarea
 + 변수 중요도가 매우 낮은 변수 제거 : id_strategic_ver, it_strategic_ver, idit_strategic_ver, ver_cus, ver_pro
 
 <img src="https://github.com/svng-zu/LG-AIMERS/assets/70852514/0b20e0d1-c783-4a7f-a6d9-bcb66c09792e" alt="data" width=70% height=70%>
 
-### 같은 의미의 다른 데이터는 같은 범주로 처리
+### 관련 정책 아이디어
 + etc, other, others $\rightarrow$ etc
 + end-customer, end customer, end-user $\rightarrow$ end_user
 

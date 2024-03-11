@@ -65,95 +65,16 @@
   
 ## 3. 해결방안
 ### 생태통로 신규입지 우선순위 선정
-+ 중복 변수 제거 : customer_country.1
-+ 결측치가 과반인 변수는 제거 : product_subcategory, product_modelname, business_area, business_subarea
-+ 변수 중요도가 매우 낮은 변수 제거 : id_strategic_ver, it_strategic_ver, idit_strategic_ver, ver_cus, ver_pro
-
-<img src="https://github.com/svng-zu/LG-AIMERS/assets/70852514/0b20e0d1-c783-4a7f-a6d9-bcb66c09792e" alt="data" width=70% height=70%>
-
-### 관련 정책 아이디어
-+ etc, other, others $\rightarrow$ etc
-+ end-customer, end customer, end-user $\rightarrow$ end_user
++ 파생 변수 생성
 
 <br/>
 
-### 개수가 1개인 범주들을 기타 처리
-+ 결측치와는 다르게 처리
++ km 당 차로 수 = 노선 일 평균 이동 차량 수 / 노선 길이
++ 개체 마리 당 생태통로 = 반경 생태통로 수 / 반경 동물 개체 수
++ 개체 마리 당 울타리 길이 = 울타리 평균 길이 / 반경 동물 개체 수
 
 <br/>
 
-### 결측치 처리
-+ 수치형 데이터는 0 대체해도 무방 했음
-+ 범주형은 None이라는 문자열로 범주처럼 처리
-<br/>
++입지 선정 우선 순위 결정 가중치 결정
 
-## 4. 모델링
-
-### 모델 선택
-#### autoML - pycaret 사용
-
-__pycaret__ <br/>
-ML workflow을 자동화 하는 opensource library로 여러 머신러닝 task에서 사용하는 모델들을 하나의 환경에서 비교하고 튜닝하는 등 간단한 코드를 통해 편리하게 사용할 수 있도록 자동화환 라이브러리
-
-#### autoML 실행결과
-<img src="https://github.com/svng-zu/LG-AIMERS/assets/70852514/1571c80d-74b2-40ce-bf06-91e4caea475e" alt="data" width=70% height=70%>
-
-+ 각 모델에 대해서 어떤 모델을, 몇 개를 조합할 것인지에 대한 실험이 필요
-
-<br/>
-
-## 5. 과적합 핸들링
-
-### 1. 언더샘플링
-+ 타겟 변수의 True와 False 값의 비율이 약 11:1로 클래스 불균형이 심한 상태임
-+ 이를 그대로 학습하게 되면 False 클래스에 편향된 모델이 되기 때문에 오버 샘플링 / 언더 샘플링을 진행
-+ 실험 결과 언더 샘플링의 F1-score가 더 높아 언더 샘플링을 진행
-
-정보 손실의 위험 $\rightarrow$ 앙상블 + 보팅으로 해결
-
-<img src="https://github.com/svng-zu/LG-AIMERS/assets/70852514/cec9466f-2b4e-4ecc-9aae-41c4f86337ef" alt="data" width=50% height=50% left=0>
-
-+ public score 0.2.. 에서 0.6 대로 상승
-
-<br/>
-
-### 2. 앙상블
-+ 여러개의 예측 모델을 결합하여 과적합을 줄이고 모델을 일반화하는 방법
-+ 앞서 고른 상위 5개 모델을 앙상블하여 모델 일반화 진행 함.
-
-<br/>
-
-### 3. 모델 학습 시 편향되어 학습되는 요인 찾기
-+ train 데이터에서 customer_idx = 25096 의 경우 영업 횟수 2421 모두 성공한 것으로 관측됨. 
-+ train 데이터의 True 개수가 4850개 임을 생각하면 위 idx에 편향되어 학습된다고 판단함
-+ pubilc score 0.7대로 상승
-
-<br/>
-
-### 4. Voting
-+ 언더 샘플링 시 정보손실의 문제가 있음.
-+ False 데이터 54449 개를 랜덤 셔플 후, 모두 20등분하고 True와 합쳐 클래스 비율이 1:1인 데이터셋 20개를 생성.
-+ 각 셔플의 모델에서의 결과를 확률로 받은 후 0, 1 클래스의 확률을 평균을 내어 최종 결과로 생성 (Soft voting)
-$\rightarrow$ public score 0.02 정도 상승을 보임
-
-<br/>
-
-## 6. AB test
-![image](https://github.com/Junoflows/LG_Aimers_phase2/assets/108385417/2717cbda-04ff-43da-87d6-7e2d8b8ca309)
-
-+ 모델 학습은 GridSearch를 이용
-
-<br/>
-
-## 7. 결과 및 리뷰
-
-### 모델 선택
-앞서 선택한 5개 모델 중 5개, 3개, 1개로 나누어 앙상블 후 가장 public score가 높은 모델 선택
-+ 'xgb' 1개 사용시 가장 성능이 높음.
-
-### 리뷰
-+ 실제 현업에서 사용하는 데이터는 전처리에 많은 시간을 쏟아야 한다는 것을 느낌
-+ 과적합을 해결하기 위해 많은 고민을 했고 그 과정에서 데이터와 모델에 대한 이해를 키울 수 있었음
-+ AutoML 의 pycaret 을 일찍 적용했더라면 실험 과정의 튜닝 시간을 효율적으로 사용했을 것 같음
-+ 임의로 설정한 값들에 대해 정확한 튜닝을 하지 못하였던 것이 아쉬움(시간 및 제출 횟수 부족)
 

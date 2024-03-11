@@ -3,7 +3,7 @@
 ### 로드킬 발생 저감을 위한 도로 생태계 안전 강화 아이디어 제시
 #### 경기남부 및 충청도를 중심으로
 
-팀원 : [유수정](https://github.com/아줌마), [한지성](https://github.com/jiseong99), [조예은]
+팀원 : [유수정](https://github.com/CristalU), [한지성](https://github.com/jiseong99), [조예은]
 
 
 

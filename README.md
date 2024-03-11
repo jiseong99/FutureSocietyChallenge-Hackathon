@@ -8,9 +8,8 @@
 
 
 ## 1. 개요
-#### [설명]
-+ MQL데이터를 활용하여 영업 기회 전환 고객을 선별하기 위한 AI모델 개발합니다.
-+ 온라인 해커톤에서 교육생들의 문제 해결 능력을 검증하여 오프라인 해커톤에 진출할 약 100명을 선별하기 위한 과정입니다.
+#### [공모 주제]
++ 환경, 질병/재난, 도시, 직업 관련 미래 사회문제 예측 및 해결방안 제시
 
 #### [주최 / 주관]
 + 주최 : 미래와 소프트
@@ -21,15 +20,21 @@
 ![image](https://github.com/jiseong99/FutureSocietyChallenge-Hackathon/assets/137580822/573f2795-f1c1-42d7-8670-5d2e108b445c)
 ![image](https://github.com/jiseong99/FutureSocietyChallenge-Hackathon/assets/137580822/d4bff781-a57c-48a6-9851-ff161b3e9bac)
 ![image](https://github.com/jiseong99/FutureSocietyChallenge-Hackathon/assets/137580822/2a02ca7c-b997-4e1f-8efc-b8db437b9f77)
++야생동물 '로드킬' 1년새 72% 증가, 보호종까지 예외는 없음
++로드킬 건수가 점차 증가하자, 정부는 동물 찻길 사고 저감 대책(20~22)를 추진한 바 있음
++생태통로, 유도울타리 등을 통하여 실제 로드킬 횟수가 줄어듦
++하지만 유지보수가 제대로 되지 않고, 현재에도 많이 로드킬이 일어나고 있기에 이용 효율을 높이는 생태통로 입지 재선정 및 유지보수가 중요하다고 판단 
+
+
 
   
 ## 2. EDA
-### 전체 데이터 확인
-<img src="https://github.com/svng-zu/LG-AIMERS/assets/70852514/9bae032e-b21f-42cf-bb43-fda2c30f461e" alt="data1" width="30%" height="30%">
-<img src="https://github.com/svng-zu/LG-AIMERS/assets/70852514/06ec7602-f1b7-4223-9e87-240d15f620f9" alt="data1" width="30%" height="30%"> <br/>
+### 활용 데이터 확인
+![image](https://github.com/jiseong99/FutureSocietyChallenge-Hackathon/assets/137580822/23d40689-de62-47cd-b0a6-3c0977c3801e)
 
-+ 결측치가 많은 데이터 임을 알 수 있음
 
+
+### 분석 로드맵
 <img src="https://github.com/svng-zu/LG-AIMERS/assets/70852514/fc7496a8-71a4-4e15-9745-3ab54bb6fa59" alt="data1" width="50%" height="50%">
 
 + 타겟 변수 is_converted 의 True, False 비율이 약 11: 1로 불균형이 있음을 알 수 있음
